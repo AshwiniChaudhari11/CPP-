@@ -1,0 +1,246 @@
+// Program to display the details of bike and car using the vehicle class..
+
+#include<iostream>
+using namespace std;
+class Vehicle
+{
+    public:
+    float mileage;
+    float price;
+};
+
+class Car:public Vehicle
+{
+    public:
+    int ownership_cost;
+    int warrenty;
+    int sitting_capacity;
+    char fuel_type[20];
+};
+
+class Bike:public Vehicle
+{
+    public:
+    int no_of_cylinders;
+    int no_of_gears;
+    char cooling_type[20];
+    char wheel_type[20];
+    int fuel_tank_size;
+
+};
+
+class Audi:public Car
+{   public:
+    string model_type;
+
+    void audi_details()
+    {   cout<<" enter the details of Audi "<<endl;
+        cout<<"enter model type ";
+        cin>>model_type;
+        cout<<"enter ownership cost ";
+        cin>>ownership_cost;
+        cout<<"enter warrenty ";
+        cin>>warrenty;
+        cout<<"enter sitting capacity ";
+        cin>>sitting_capacity;
+        cout<<"enter fuel type ";
+        cin>>fuel_type;
+        cout<<"enter mileage ";
+        cin>>mileage;
+        cout<<"enter price ";
+        cin>>price;
+       
+    }
+
+
+    void display_audi()
+    {   cout<<" display the audi details "<<endl;
+        cout<<"model type"<<model_type<<endl;
+        cout<<"owenership cost"<<ownership_cost <<endl;
+        cout<<"warrenty"<<warrenty <<endl;
+        cout<<"sitting capacity"<<sitting_capacity <<endl;
+        cout<<"fuel type"<< fuel_type<<endl; 
+        cout<<"mileage"<<mileage <<endl;
+        cout<<"price"<<price <<endl;  
+    }
+};
+
+class Ford:public Car
+{   public:
+    string model_type;
+
+    void ford_details()
+    {
+        cout<<" enter the details of Ford "<<endl;
+        cout<<"enter model type ";
+        cin>>model_type;
+        cout<<"enter ownership cost ";
+        cin>>ownership_cost;
+        cout<<"enter warrenty ";
+        cin>>warrenty;
+        cout<<"enter sitting capacity ";
+        cin>>sitting_capacity;
+        cout<<"enter fuel type ";
+        cin>>fuel_type;
+        cout<<"enter mileage ";
+        cin>>mileage;
+        cout<<"enter price ";
+        cin>>price;
+    }
+ void display_ford()
+    {
+        cout<<" display the Ford details "<<endl;
+        cout<<"model type"<<model_type<<endl;
+        cout<<"owenership cost"<<ownership_cost <<endl;
+        cout<<"warrenty"<<warrenty <<endl;
+        cout<<"sitting capacity"<<sitting_capacity <<endl;
+        cout<<"fuel type"<< fuel_type<<endl; 
+        cout<<"mileage"<<mileage <<endl;
+        cout<<"price"<<price <<endl;  
+       
+    }
+};
+
+class Bajaj:public Bike
+{   public:
+    string make_type;
+
+    void bajaj_details()
+    {   
+        cout<<" enter the details of Bajaj"<<endl;
+        cout<<"enter make type ";
+        cin>>make_type;
+        cout<<"enter number of cylinders ";
+        cin>>no_of_cylinders;
+        cout<<"enter number of gears ";
+        cin>>no_of_gears;
+        cout<<"cooling type ";
+        cin>>cooling_type;
+        cout<<"wheel type ";
+        cin>>wheel_type;
+        cout<<"enter fuel tank size ";
+        cin>>fuel_tank_size;
+        cout<<"enter mileage ";
+        cin>>mileage;
+        cout<<"enter price ";
+        cin>>price;
+    }
+    
+    void display_bajaj()
+    {   
+        cout<<" display the Bajaj details "<<endl;
+        cout<<"make type"<<make_type<<endl;
+        cout<<"number of cylinders"<<no_of_cylinders<<endl;
+        cout<<"number of gears"<<no_of_gears<<endl;
+        cout<<"cooling type"<<cooling_type<<endl;
+        cout<<"wheel type"<<wheel_type<<endl;
+        cout<<"fuel tank size"<<fuel_tank_size<<endl; 
+        cout<<"mileage"<<mileage <<endl;
+        cout<<"price"<<price <<endl;  
+        
+    }
+};
+
+class Tvs:public Bike
+{   public:
+    string make_type;
+
+    void tvs_details()
+    {   cout<<" enter the details of Tvs "<<endl;
+        cout<<"enter make type ";
+        cin>>make_type;
+        cout<<"enter number of cylinders ";
+        cin>>no_of_cylinders;
+        cout<<"enter number of gears ";
+        cin>>no_of_gears;
+        cout<<"cooling type ";
+        cin>>cooling_type;
+        cout<<"wheel type ";
+        cin>>wheel_type;
+        cout<<"enter fuel tank size ";
+        cin>>fuel_tank_size;
+        cout<<"enter mileage ";
+        cin>>mileage;
+        cout<<"enter price ";
+        cin>>price;
+    }
+
+    void display_tvs()
+    {   
+        cout<<" display the Tvs details "<<endl;
+        cout<<"make type"<<make_type<<endl;
+        cout<<"number of cylinders"<<no_of_cylinders<<endl;
+        cout<<"number of gears"<<no_of_gears<<endl;
+        cout<<"cooling type"<<cooling_type<<endl;
+        cout<<"wheel type"<<wheel_type<<endl;
+        cout<<"fuel tank size"<<fuel_tank_size<<endl; 
+        cout<<"mileage"<<mileage <<endl;
+        cout<<"price"<<price <<endl;  
+        
+    }
+};
+
+int main()
+{  
+    Audi a;
+    Ford f;
+    Bajaj b;
+    Tvs t;
+    int choice;
+do{
+  cout<<"1.Audi details"<<endl;
+  cout<<"2.Display audi details"<<endl;
+  cout<<"3.Ford details"<<endl;
+  cout<<"4.Display ford details"<<endl;
+  cout<<"5.Bajaj details"<<endl;
+  cout<<"6.Display bajaj details"<<endl;
+  cout<<"7.Tvs details"<<endl;
+  cout<<"8.Display tvs details"<<endl;
+  cout<<"9.Quite"<<endl;
+  cout<<"enter your choice:";
+  cin>>choice;
+
+  switch(choice)
+  {
+    case 1:
+    a.audi_details();
+    break;
+
+    case 2:
+    a.display_audi();
+    break;
+
+    case 3:
+    f.ford_details();
+    break;
+
+    case 4:
+    f.display_ford();
+    break;
+
+    case 5:
+    b.bajaj_details();
+    break;
+
+    case 6:
+    b.display_bajaj();
+    break;
+
+    case 7:
+    t.tvs_details();
+    break;
+
+    case 8:
+    t.display_tvs();
+    break;
+
+    case 9:
+    break;
+    default:
+    cout<<"wrong choice";
+    
+}
+
+}while(choice!=9);
+return 0;
+}

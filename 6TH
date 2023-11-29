@@ -1,0 +1,47 @@
+#include <iostream>
+#include <stack>
+#include <cmath>
+using namespace std;
+
+int binaryToDecimal(stack<char> &st, int size) {
+    int decimal = 0;
+    for (int i = 0; i < size; i++) {
+        if (st.top() == '1') {
+            decimal += pow(2, i);
+        }
+        st.pop();
+    }
+    return decimal;
+}
+
+int main() {
+    stack<char> st1, st2;
+    int x, y, num1 = 0, num2 = 0;
+
+    cout << "Enter number of digits for the first number: ";
+    cin >> x;
+    cout << "Enter binary number for the first number: ";
+    for (int i = 0; i < x; i++) {
+        char ch;
+        cin >> ch;
+        st1.push(ch);
+    }
+
+    cout << "Enter number of digits for the second number: ";
+    cin >> y;
+    cout << "Enter binary number for the second number: ";
+    for (int i = 0; i < y; i++) {
+        char ch;
+        cin >> ch;
+        st2.push(ch);
+    }
+
+    num1 = binaryToDecimal(st1, x);
+    num2 = binaryToDecimal(st2, y);
+
+    cout << "Decimal equivalent of the first number: " << num1 << endl;
+    cout << "Decimal equivalent of the second number: " << num2 << endl;
+    cout << "Sum of the two numbers = " << num1 + num2 << endl;
+
+    return 0;
+}

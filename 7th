@@ -1,0 +1,71 @@
+//Program for arithmetic exception when the entered number format is not integer the number format exception occurs!!!!!!!!!!!!!!
+
+
+#include <iostream>
+using namespace std;
+class Exception{
+    
+    public:
+    float a,b;
+    int arr[3];
+    int i;
+    void set_member(){
+        cout<<"Enter number a";
+        cin>>a;
+        cout<<"Enter number b";
+        cin>>b;
+        cout<<"Enter array element:\n";
+        for(i=0;i<5;i++){
+            cout<<"Enter a["<<i<<"]=";
+            cin>>arr[i];
+        }
+    }
+    void array_exception(){
+        cout<<"Which element you want to enter\n";
+        cin>>i;
+        try{
+            if(i<5)
+            cout<<"a["<<i<<"]="<<arr[i]<<endl;
+            else
+            throw 1;
+        }
+        catch (int){
+            cout<<"Array index is not present\n";
+        }
+        
+    }
+    void num_division(){
+        cout<<"Trying number division\n";
+        try{
+            if(b==0)
+            throw 1;
+        }
+        catch (int){
+            cout<<"Arithmetic condition\n";
+        }
+        try{
+            if(a!=(int)a && b!=(int)b )
+            
+            throw 2;
+        }
+        catch (int){
+            cout<<"Number format exception occurs\n";
+        }
+        try{
+            if(a==(int)a && b==(int)b )
+            cout<<"Divison="<<a/b;
+            throw 2;
+        }
+        catch (int){
+            
+        }
+    }
+    
+};
+int main(){
+    Exception e;
+    e.set_member();
+    e.array_exception();
+    e.num_division();
+    return 0;
+}

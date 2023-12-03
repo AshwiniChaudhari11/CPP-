@@ -1,0 +1,11 @@
+//Program for print the array element on separate line!!!!!!!!!!!
+#include <iostream>
+using namespace std;
+
+int main() {
+   string oceans[] = {"Pacific", "Atlantic", "Indian", "Arctic", "Southern"};
+  for(int i = 0; i < 5; i++){
+    cout << oceans[i] << endl;
+  }
+  return 0;
+}

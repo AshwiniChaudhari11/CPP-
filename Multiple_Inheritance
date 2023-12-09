@@ -1,0 +1,44 @@
+//C++ program to read and print employee information using multiple inheritance !!!!!!!!!!
+
+#include<iostream>
+using namespace std;
+class A{
+    public:
+    void info(){
+        cout<<"Display info of employee\n";
+    }
+};
+class B{
+  public:
+ string name;
+  int employeeid;
+  float salary;
+  string address;
+
+  void accept(){
+      cout<<"Enter name of employee";
+      cin>>name;
+      cout<<"Enter employeeid";
+      cin>>employeeid;
+      cout<<"Enter salary";
+      cin>>salary;
+      cout<<"Enter address";
+      cin>>address;
+  }
+};
+class C:public A,public B{
+    public:
+  void display(){
+      cout<<"Nmae is "<<name;
+      cout<<"Employee ID is "<<employeeid;
+      cout<<"Salary of employee is "<<salary;
+      cout<<"Address of employee is "<<address;
+  }  
+};
+int main(){
+   C c;
+   c.info();
+   c.accept();
+   c.display();
+    return 0;
+}

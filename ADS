@@ -1,0 +1,31 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+struct node{
+    int data;
+    node * next;
+}* start = nullptr; 
+node * create(int num){
+    node * ptr;
+    ptr=new node;
+    if(ptr==NULL){
+        
+        cout<<"is not allocated";
+        exit(0);
+    }
+    else{
+        ptr->data=num;
+        ptr->next=NULL;
+        return ptr;
+    }
+}
+
+int main() {
+node * ptr;
+int data;
+cout<<"enter element";
+cin>>data;
+ptr=create(data);
+
+    return 0;
+}
